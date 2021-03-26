@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Theja Tulabandhula</title>
-    <link>http://theja.org/</link>
+    <link>https://theja.org/</link>
     <description>Recent content on Theja Tulabandhula</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://theja.org/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://theja.org/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
