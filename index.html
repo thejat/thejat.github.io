@@ -1,435 +1,686 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 
-    <head>
-	<meta name="generator" content="Hugo 0.82.0" />
-        <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer">
-<meta name="description" content="Theja Tulabandhula PhD MIT Machine Learning Artificial Intelligence">
-<title>
-Theja Tulabandhula
-</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Theja Tulabandhula" />
-
-        
-        <meta property="og:title" content="Theja Tulabandhula" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="Theja Tulabandhula PhD MIT Machine Learning Artificial Intelligence"/>
-<meta property="og:url" content="https://theja.org/"/>
-<meta property="og:site_name" content="Theja Tulabandhula"/>
+      <link rel="stylesheet" href="/static/dist/main.css">
+      <script src="//unpkg.com/alpinejs" defer></script>
+    <title>Theja Tulabandhula</title>
+</head>
 
 
+<body>
 
 
-<meta property="og:image" content="https://theja.org/home/profile.jpg"/>
-
-
-
-
-        
-<link rel="shortcut icon" href="/img/fav.ico">
-
-
-        
-
-
-
-
-
-<link rel="stylesheet" href="/css/main.min.84f93172277cdc39bfd0f5477be31c4c7a2f21fbab96f9bb0604dc9aeece07bd.css" integrity="sha256-hPkxcid83Dm/0PVHe&#43;McTHovIfurlvm7BgTcmu7OB70=" crossorigin="anonymous" media="screen">
-
-
-
-
-
-        
-
-
-<link rel="stylesheet" href="https://theja.org/styles/owlCarousel.min.b1f26e29c43c61fe8b5a6f225b4ee7c5f969a7b33cfe512706271e07246d93d1.css" integrity="sha256-sfJuKcQ8Yf6LWm8iW07nxflpp7M8/lEnBiceByRtk9E=" crossorigin="anonymous" media="screen">
-
-    </head>
-
-    <body>
-        
-        <section id="top" class="hero is-fullheight">
-            
-            <div class="hero-head"></div>
-
-            
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    
-                    <h1 class="bold-title fade-in one">
-                        Hi, I&rsquo;m Theja
-                    </h1>
-                    <div class="subtitle is-3 fade-in two">
-                        <p>I&rsquo;m a researcher and a machine learning engineer. I have a PhD in ML from CSAIL/EECS at MIT.</p>
-
-                    </div>
-                    
-                    
-                    <div class="fade-in three">
-                        <div class="social-icons">
-    
-    <a href="https://twitter.com/ttulabandhula" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://linkedin.com/in/theja-t" >
-        <i class="fab fab fa-linkedin-in"></i>
-    </a>
-    
-    <a href="mailto:hey@theja.org" >
-        <i class="fas fab fa-paper-plane"></i>
-    </a>
-    
-    <a href="https://github.com/thejat" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-</div>
-
-                    </div>
-                    
+<!--NAV-->
+<header class="bg-white dark:bg-gray-900">
+    <nav x-data="{ isOpen: false }"  class="border-b dark:border-gray-700">
+        <div class="container px-6 py-4 mx-auto lg:flex lg:justify-between lg:items-center">
+            <div class="flex items-center justify-between">
+                <div>
+                    <img class="flex-shrink-0 object-cover h-12 sm:mx-4" src="static/images/aiaffinity-logo.svg" alt="">
                 </div>
-            </div> 
-            
 
-            <div class="hero-foot fade-in three">
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden">
+                    <button x-cloak @click="isOpen = !isOpen" type="button" class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400" aria-label="toggle menu">
+                        <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                        </svg>
                 
-                
-<div class="container">
-    <hr>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        
-        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-        <div class="navbar-menu has-content-centered" id="navMenu">
-            
-            
-            
-            
+                        <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-            
-            
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none dark:bg-gray-900 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+                <div class="flex flex-col space-y-8 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8">
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#research">Research</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#teaching">Teaching</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#others">Others</a>
+                    <a class="block font-medium text-gray-700 dark:text-gray-200 lg:mx-8 hover:text-gray-900 dark:hover:text-gray-400 hover:underline" href="#footer">Contact</a>
 
-            
-
-            
-
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#about">About</a>
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#consulting">Consulting</a>
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#education">Education</a>
-            
-            
-            
-            
-            
-            <a class="navbar-item" href="#academic">Research</a>
-            
-            
-            
-            
-
-            
-            
-            <a class="navbar-item" href="#contact">Contact</a>
-            
-            
-
-            
-
-            
-            
+                    <a href="https://cal.com/theja"><button class="flex items-center justify-center px-6 py-2.5 text-sm font-medium tracking-wide text-center text-white capitalize transition-colors duration-300 transform bg-gray-700 rounded-lg hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                        Calendar Signup
+                    </button></a>
+                </div>
+            </div>
         </div>
     </nav>
-    <hr>
-</div>
+</header>
 
 
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
+        <div class="flex justify-center xl:w-1/2">
+            <img class="h-80 w-80 sm:w-[28rem] sm:h-[28rem] flex-shrink-0 object-cover rounded-full" src="static/images/theja.jpg" alt="">
+        </div>
+
+        <div class="flex flex-col items-center mt-6 xl:items-start xl:w-1/2 xl:mt-0">
+            <h2 class="text-2xl font-semibold tracking-tight text-gray-800 xl:text-3xl dark:text-white">
+                Theja <span class="text-blue-500">Tulabandhula</span> Ph.D.
+            </h2>
+
+            <p class="block max-w-2xl mt-4 text-gray-500 dark:text-gray-300">Theja is an Assistant Professor at the University of Illinois Chicago. He obtained his PhD in computer science/machine learning from MIT CSAIL. He has 12+ years of experience in solving novel machine learning problems, and has built and deployed multiple ML solutions at scale. He has also co-authored 50+ research papers at top AI/ML related venues (e.g., JMLR, MLJ, UAI, AAMAS, WWW, Sensors, EJOR, MICCAI, ICASSP etc) and has been awarded 10+ patents.</p>
+
+            <p class="block max-w-2xl mt-4 text-gray-500 dark:text-gray-300">His professional experiences include working with Apple, Citadel, State Street, Texas Instruments, AI Affinity, Headspace and others. His current research areas of interest include user behavior modeling, reinforcement learning and the use of machine learning techniques in impactful applications. He is motivated towards meaningfully helping improve AI driven service systems and positively contributing to the society. </p>
+
+            <div class="mt-6 sm:-mx-2">
+                <a href="https://scholar.google.com/citations?user=K6FIDzYAAAAJ&hl=en&oi=ao" class="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 overflow-hidden text-white transition-colors duration-300 bg-gray-900 rounded-lg shadow sm:w-auto sm:mx-2 hover:bg-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+
+                    <span class="mx-2">
+                        Google Scholar Profile
+                    </span>
+                </a>
+
+                <a href="https://linkedin.com/in/theja-t"
+                    class="inline-flex items-center justify-center w-full px-4 text-sm py-2.5 mt-4 overflow-hidden text-white transition-colors duration-300 bg-blue-600 rounded-lg shadow sm:w-auto sm:mx-2 sm:mt-0 hover:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                    <span class="mx-2">
+                        Linkedin Profile
+                    </span>
+                </a>
             </div>
-        </section> 
-
-        
-        
-        
-
-        
-
-        
-
-        
-        
-        
-        
-        
-        
-
-        
-        <div class="section" id="about">
-            <div class="container">
-                <h2 class="title is-2 has-text-centered">About</h2>
-                
-                <div class="columns">
-                    <div class="column is-one-third has-text-centered">
-                        
-                        
-                        <img class="img-responsive avatar" src="https://theja.org/home/profile_huaf91840404998af916c0ddf039d6c43d_585062_320x0_resize_q75_box.jpg" alt="profile.jpg">
-                        
-                        
-                    </div>
-                    <div class="markdown column">
-                        <p>I build value-driven machine learning and optimization solutions in applications that typically interface with people. I focus on bringing the best out of data and enabling large gains in key business metrics.</p>
-<p>In addition to various consulting engagements, my work experiences include working with/at: the University of Illinois at Chicago, Xerox Research, Massachusetts Institute of Technology, Citadel Investments, Apple, State Street Global Advisors, Indian Institutes of Technology at Kharagpur and Bombay, and Texas Instruments to name a few.</p>
-<p>I am broadly interested in pursuing practical solutions to applied problems, which make use of carefully chosen statistical models and data driven decision making methods, and have a significant impact on business and societal outcomes. Some specific interests include:</p>
-<ul>
-<li>Modeling human behavior and enhancing their decision making prowess quantitatively</li>
-<li>Developing application specific machine learning/statistical methods</li>
-<li>Developing special-purpose optimization and reinforcement learning methods for real life deployment</li>
-<li>Tech entrepreneurship (e.g., ML Ops, scalable data pipelines, online experimentation, personalization)</li>
-</ul>
-
-                    </div>
-                </div>
-                
-            </div>
-            
-            <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
         </div>
-        <div class="container">
-            <hr>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-
-        
-        <div class="section" id="consulting">
-            <div class="container">
-                <h2 class="title is-2 has-text-centered">Consulting</h2>
-                
-                <div class="markdown has-text-centered">
-                    <p>I have had the opportunity to work with a variety of teams and businesses on deploying data driven solutions across multiple domains. If you are interested in discussing a specific problem, I am available for an initial online meeting.</p>
-<p>More generally, if my skillset interests you, or you would like to learn more about what value I can add to your team, please get in touch!</p>
-
-                </div>
-                
-            </div>
-            
-            <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-
-        
-        <div class="section" id="education">
-            <div class="container">
-                <h2 class="title is-2 has-text-centered">Education</h2>
-                
-                <div class="markdown has-text-centered">
-                    <div style="text-align: left">
-<p>I have a <a href="https://www.genealogy.math.ndsu.nodak.edu/id.php?id=190812">PhD in Electrical Engineering and Computer Science</a> from the  Massachusetts Institute of Technology, Cambridge, USA. My thesis topic area was <em>Machine Learning and Optimization</em>. I also have a Dual Degree in Electrical Engineering from the Indian Institute of Technology Kharagpur, India. While there, I was awarded the Prime Minister’s Gold Medal for being ranked 1 GPA-wise across the university. I have also been a Fulbright Science and Technology Scholar.</p>
-</div>
-
-                </div>
-                
-            </div>
-            
-            <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-
-        
-        <div class="section" id="academic">
-            <div class="container">
-                <h2 class="title is-2 has-text-centered">Research</h2>
-                
-                <div class="markdown has-text-centered">
-                    <div style="text-align: left">
-I am fortunate to have had an excellent set of collaborators in my research pursuits. To see the 40+ research threads I have pursued, broadly in the areas of machine learning (including supervised, online and reinforcement learning variants) and optimization (both continuous and discrete), you can use the links below:
-</div>
-<p><a href="https://scholar.archive.org/search?q=tulabandhula&amp;sort_order=time_desc">Archive Scholar</a> | <a href="http://dblp.uni-trier.de/pers/hd/t/Tulabandhula:Theja">DBLP</a> | <a href="https://arxiv.org/search/?searchtype=author&amp;query=Tulabandhula%2C+T&amp;size=50&amp;order=-announced_date_first">Arxiv</a> | <a href="https://ssrn.com/author=3241384">SSRN</a> | <a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=1,5&amp;as_vis=1&amp;q=%22Theja+Tulabandhula%22">Google Scholar</a></p>
-<div style="text-align: left">
-Here is a very-short biased sample of research topics that I have looked at:
- <ul>
-  <li>Optimizing and personalizing recommendations, assortments as well as prices under realistic user behavior models.</li>
-  <li>Pricing new products and doing machine learning in competitive settings (e.g., accounting for strategic behavior and loyalty).</li>
-  <li>Designing well-behaved online and reinforcement learning methods for personalization by exploiting the underlying domain specific structure.</li>
-  <li>Enhancing supervised machine learning in the presence of operational information.</li>
-  <li>Solving hard decision problems in transportation such as scheduling, crowd-shipping and enabling fair ride-shares.</li>
-</ul> 
-</div>
-<p>Some videos related to my research are on <a href="https://www.youtube.com/c/ThejaTulabandhula">Youtube</a>. On a related note, some threads/projects have also culminated into a <a href="https://patents.google.com/?inventor=Theja+Tulabandhula">few patents</a>.</p>
-
-                </div>
-                
-            </div>
-            
-            <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        
-        
-        
-        
-        
-        
-        <div class="section" id="contact">
-            <div class="container has-text-centered">
-                <h2 class="title is-2">Contact</h2>
-                <div class="markdown">
-                    <p>Get in touch with me via my email address. I will try to respond back in 1-2 business days.</p>
-
-                </div>
-                
-                <p>My current local time is <span id="time"></span>.</p>
-                
-                
-                <h3 class="subtitle is-3 has-text-centered top-pad">
-                    <a href="mailto:hey@theja.org">hey@theja.org</a>
-                </h3>
-                
-                <div class="social-icons">
-    
-    <a href="https://twitter.com/ttulabandhula" >
-        <i class="fab fab fa-twitter"></i>
-    </a>
-    
-    <a href="https://linkedin.com/in/theja-t" >
-        <i class="fab fab fa-linkedin-in"></i>
-    </a>
-    
-    <a href="mailto:hey@theja.org" >
-        <i class="fas fab fa-paper-plane"></i>
-    </a>
-    
-    <a href="https://github.com/thejat" >
-        <i class="fab fab fa-github"></i>
-    </a>
-    
-</div>
-
-            </div>
-            
-            <div class="container has-text-centered top-pad">
-    <a href="#top">
-        <i class="fa fa-arrow-up"></i>
-    </a>
-</div>
-
-        </div>
-        <div class="container">
-            <hr>
-        </div>
-        
-        
-        
-
-        <div class="section" id="footer">
-    <div class="container has-text-centered">
-    
-        <span class="footer-text">
-            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. © 2021 Theja Tulabandhula.
-        </span>
-    
     </div>
-</div>
+</section>
+
+
+
+
+
+
+
+
+<!-- RESEARCH -->
+<section id="research" class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Research <span class="text-blue-500">Experiences</span></h1>
+
+        <p class="mt-6 text-center text-gray-500 dark:text-gray-300">
+            Theja conducts research in the areas of machine learning techniques (including supervised, online and reinforcement learning variants) and optimization techniques (both continuous and discrete).
+        </p>
+
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2">
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">User Behavior</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                             Defining and estimating realistic quantitative user behavior models (both stochastic and strategic) in service systems such as healthcare (including digital health), transportation and digital platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">Decision Making</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            Designing scalable single shot optimization techniques that optimize decisions such as interventions/treatment plans in healthcare, routing and matching in transportation, and pricing and recommendations in digital platforms.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">RL & Bandits</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            Designing well-behaved online and reinforcement learning methods for personalization in service systems by carefully accounting for the underlying domain specific structure.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">Decision-aware ML</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            Enhancing machine learning and estimation processes in the presence of operational information and downstream decision preferences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-6 py-10 mx-auto">
+        <h3 class="text-xl font-semibold text-gray-800 capitalize lg:text-2xl dark:text-white">Sample Research <span class="text-blue-500">Talk</span></h3>
+
+        <p class="mx-auto mt-6 text-left text-gray-500 dark:text-gray-300">
+            Below is a video about user behavior modeling and multi-armed bandits. Similar videos can be viewed on his <span class="text-blue-500 "><a href="https://www.youtube.com/c/ThejaTulabandhula">youtube channel</a></span>.
+        </p>
+
+        <iframe class="min-w-full mt-12 h-64 md:h-[450px] rounded-xl overflow-hidden" src="https://www.youtube.com/embed/I5yCJ74fINE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
         
-        
+    </div>
+
+    <div class="container px-6 py-10 mx-auto">
+
+        <h3 class="text-xl font-semibold text-gray-800 capitalize lg:text-2xl dark:text-white">Publication <span class="text-blue-500">Links</span></h3>
 
 
-<script src="https://theja.org/js/bundle.f1741e9868b2f697e71cf8fccfcc12166540999b3d36f8fb9edd0882ba425d55.js" integrity="sha256-8XQemGiy9pfnHPj8z8wSFmVAmZs9Nvj7nt0IgrpCXVU="></script>
+        <p class="mx-auto mt-6 text-left text-gray-500 dark:text-gray-300">
+            In addition to the <span class="text-blue-500 "><a href="https://scholar.google.com/citations?user=K6FIDzYAAAAJ&hl=en&oi=ao">Google Scholar profile</a></span> (also linked at the top), most manuscripts can be accessed from the pre-print archives and indices below. There are multiple links due to the interdisciplinary nature of his research.
+        </p>
+
+
+    <div class="flex flex-col justify-between flex-1 mt-6">
+        <nav>
+<!--             <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://scholar.archive.org/search?q=tulabandhula&sort_order=time_desc">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Archive Scholar</span>
+            </a> -->
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="http://dblp.uni-trier.de/pers/hd/t/Tulabandhula:Theja">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">DBLP</span>
+            </a>
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://arxiv.org/search/?searchtype=author&query=Tulabandhula%2C+T&size=50&order=-announced_date_first">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Arxiv</span>
+            </a>
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://ssrn.com/author=3241384">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">SSRN</span>
+            </a>
+        </nav>
+
+
+    </div>
+
+
+        <p class="mx-auto mt-6 text-left text-gray-500 dark:text-gray-300">
+        Specific journal names have been omitted in the sections below for simplicity. Follow the links to know more about these and other papers.
+        </p>
+  </div>
+  
+</section>
+
+
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Research Application Area: <span class="text-blue-500">Transportation</span></h1>
+
+        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            Select research threads are summarized below.
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Reinforcement learning for combinatorial optimization</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    We propose a deep reinforcement learning (DRL)-based approach to the dynamic on-demand crowdshipping problem in which requests constantly arrive in a crowdshipping system for pickup and delivery within limited time windows. We develop novel heuristics-embedded Deep Q-Network (DQN) algorithms that incorporate double and dueling structures as well as hard constraints, to train DRL agents.
+                </p>
+
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S1366554522002678" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Learning ride-sharing preferences</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    In this work, we focused on learning sharing preferences of participants in an online manner, and deciding how to group them to achieve maximum participant satisfaction (a combinatorial optimization setting). Under certain user behavior models, we show how statistically efficient learning and computationally efficient decision making can be achieved.
+                </p>
+
+                <a href="https://arxiv.org/abs/1703.07807" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Pricing in ride-sharing when users are utility-maximizing</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Here, we proposed the notion of sequential fairness and sequential individual rationality that capture mutual inconveniences (such as detours). Further, assuming users follow a particular choice model, we show how a firm (e.g., Uber) can price the exclusive and shared ride options to maximize revenue. We also investigated how offering fairness guarantees can influence market share (a collective user behavior) and improve profits, with extensive simulations using the New York City Taxi dataset.
+                </p>
+
+                <a href="https://arxiv.org/abs/1706.02682" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
 
 
 
-        
 
 
-<script src="https://theja.org/js/bundleOwlCarousel.bc6b73f0a36bf19c70c5df8fc352d322988ca2bc40743fb836ee7371d555c28a.js" integrity="sha256-vGtz8KNr8Zxwxd&#43;Pw1LTIpiMorxAdD&#43;4Nu5zcdVVwoo="></script>
+<section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Research Application Area: <span class="text-blue-500">Digital</span></h1>
+
+        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            Select research threads are summarized below.
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Thompson sampling when users have fatigue</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    We assume a model where users are shown recommendation lists, and are susceptible to both positional and fatigue effects. We show how a Thompson sampling based scheme can learn the relevant parameters and achieve sublinear regret with a milder dependence on the number of actions (quadratic in the number of recommendations versus exponential).
+                </p>
+
+                <a href="https://arxiv.org/abs/1901.07734" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Bandit methods when users have repetition effects</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Here we assume that users are susceptible to priming effects (for instance, repeating the same recommendation increases the propensity to buy) and show how a bandit algorithm can be designed to maximize revenue with near-optimal regret guarantees.
+                </p>
+
+                <a href="https://arxiv.org/abs/1811.09026" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Optimizing recommendations under a multi-purchase choice model</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    We define a multi-purchase customer choice model within the random utility maximization framework and compare its fit to real world datasets. We further develop multiple optimization approaches to optimize the recommendation sets given such a choice model.
+                </p>
+
+                <a href="https://arxiv.org/abs/2006.08055" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
-        
-        <script>
-            function update_localtime() {
-                const time = new Date().toLocaleTimeString('en-US', { timeZone: 'America\/Chicago', timeStyle: 'short' });
-                document.getElementById('time').innerHTML = time;
-            }
-            update_localtime();
-            
-            setInterval(update_localtime, 1000);
-        </script>
-        
-    </body>
 
+
+
+
+
+<section class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Research Application Area: <span class="text-blue-500">Healthcare</span></h1>
+
+        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            Select research threads are summarized below.
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Unifying functional and structural connectomes via Graph Neural Networks</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Most published connectome studies have focused on either structural or functional connectome separately, yet complementary information between them, when available in the same dataset, can be jointly leveraged to improve our understanding of the brain. We propose a function-constrained structural graph variational autoencoder (FCS-GVAE) capable of incorporating information from both functional and structural connectome in an unsupervised fashion, leading to improvements in embeddings and downstream prediction/exploration tasks.
+                </p>
+
+                <a href="https://arxiv.org/abs/2207.02328" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Exploration using payments in mobile health (mHealth)</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    We assume users follow a linear random utility model and focus on learning via additional payments while minimizing regret in a contextual bandit framework. We develop a variety of schemes, including modifications to existing contextual bandit algorithms to make them amenable to principal-agent settings, and give guarantees on total expected payments.
+                </p>
+
+                <a href="https://arxiv.org/abs/2001.07853" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="p-8 space-y-3 border-2 border-blue-400 dark:border-blue-300 rounded-xl">
+                <span class="inline-block text-blue-500 dark:text-blue-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Routing patients to ER via reinforcement learning</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    We extend bandit methods to an RL setting where patient arrivals and service levels of ERs are not known a-priori and the goal is to learn a policy for routing that minimizes waiting times. The key idea here is to exploit the structure of the optimal policy of the unknown MDP to restrict the search space.
+                </p>
+
+                <a href="https://arxiv.org/abs/1608.04929" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- TEACHING -->
+<section id="teaching" class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">Teaching <span class="text-blue-500">Experiences</span></h1>
+
+        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            A playlist containing a sample set of lectures from his deep learning course is embedded below. Most of the course materials are available on <span class="text-blue-500 "><a href="https://github.com/thejat/">Github</a></span>, and brief descriptions form them are also shown below the video.
+        </p>
+
+        <iframe class="min-w-full mt-12 h-64 md:h-[450px] rounded-xl overflow-hidden"  src="https://www.youtube.com/embed/videoseries?list=PLzq3B7Hh4uvbbScHp376RuVauoNyrOGCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2">
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">Statistical Models and Methods for Business Analytics</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            The goal of this class is to cover the foundations of modern statistics and machine learning methods complementing the data mining focus of sibling courses. In other words, you will get up to speed with the requisite background, as well as the key theoretical underpinnings of modern analytics. We will do so through the lens of statistical machine learning. Lectures will be complemented with hands-on exercises.
+                        </p>
+
+                        <a href="https://github.com/thejat/ml-notebooks/" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">Deep Learning and Modern Applications</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            Broadly, we will cover topics spanning deep learning and reinforcement learning. In particular, we will study popular deep learning architectures, their design choices and how they are trained. This will be motivated by business applications dealing with image, text and tabular data. Finally, we will look at online and reinforcement learning frameworks and their role in sequential decision making settings such as retail.
+                        </p>
+
+                        <a href="https://github.com/thejat/dl-notebooks/blob/master/Syllabus.ipynb" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">MLOps: A Gentle Introduction to Machine Learning Deployment</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            This practice-oriented course surveys modern best practices around getting machine learning (ML) models into production. We will learn multiple ways of operationalizing machine learning workflows and models in the context of the larger business end-goals. We will gain a better understanding of strategies for model management, monitoring and deployment. Further, we intertwine these topics with online experimentation techniques (A/B testing) and software engineering ideas such as version control, containerization, and continuous integration/continuous deployment.                      
+                        </p>
+                        <a href="https://github.com/thejat/mlops-notebooks/blob/master/Syllabus.ipynb" class="inline-flex p-2 text-blue-500 capitalize transition-colors duration-300 transform bg-blue-100 rounded-full rtl:-scale-x-100 dark:bg-blue-500 dark:text-white hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+ <!--            <div class="p-6 border rounded-xl border-r-gray-200 dark:border-gray-700">
+                <div class="md:flex md:items-start md:-mx-4">
+                    <span class="inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
+                    </span>
+
+                    <div class="mt-4 md:mx-4 md:mt-0">
+                        <h1 class="text-xl font-medium text-gray-700 capitalize dark:text-white">Simple & clean designs</h1>
+
+                        <p class="mt-3 text-gray-500 dark:text-gray-300">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- OTHERS -->
+<section id="others" class="bg-white dark:bg-gray-900">
+    <div class="container px-6 py-10 mx-auto">
+
+        <h1 class="text-xl font-semibold text-gray-800 capitalize lg:text-2xl dark:text-white">Other <span class="text-blue-500">Links</span></h1>
+
+
+        <p class="mx-auto mt-6 text-left text-gray-500 dark:text-gray-300">
+            Theja's other interests include reading, hiking, biking, travel and many more. Some links to his social media are given below. 
+        </p>
+
+
+    <div class="flex flex-col justify-between flex-1 mt-6">
+        <nav>
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://patents.google.com/?inventor=Theja+Tulabandhula">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Google Patents</span>
+            </a>
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://www.youtube.com/c/ThejaTulabandhula">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Youtube</span>
+            </a>
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://github.com/thejat">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Github</span>
+            </a>
+
+            <a class="flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700" href="https://twitter.com/ttulabandhula">
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 11H5M19 11C20.1046 11 21 11.8954 21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V13C3 11.8954 3.89543 11 5 11M19 11V9C19 7.89543 18.1046 7 17 7M5 11V9C5 7.89543 5.89543 7 7 7M7 7V5C7 3.89543 7.89543 3 9 3H15C16.1046 3 17 3.89543 17 5V7M7 7H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span class="mx-4 font-medium">Twitter</span>
+            </a>
+        </nav>
+    </div>
+</section>
+
+
+
+
+
+
+
+  <!--FOOTER-->
+<section id="footer" class="bg-white dark:bg-gray-900">
+  <footer class="bg-white dark:bg-gray-900">
+      <div class="container px-6 py-8 mx-auto">
+          <div class="text-center place-content-center">
+
+              <p class="max-w-md mx-auto mt-2 text-gray-500 dark:text-gray-400">If you are interested in talking to Theja, please sign up for an online meeting!</p>
+
+              <div class="flex flex-col mt-4 sm:flex-row sm:items-center sm:justify-center">
+                  <a href="https://cal.com/theja">
+                    <button class="w-full px-5 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">Calendar Signup</button>
+                  </a>
+              </div>
+          </div>
+
+          <hr class="my-10 border-gray-200 dark:border-gray-700" />
+
+          <div class="flex flex-col items-center sm:flex-row sm:justify-between">
+              <p class="text-sm text-gray-400">© Copyright Theja Tulabandhula. All Rights Reserved. Chicago, USA. Ph: +1-312-996-9456. Email: domain-name at uic dot edu</p>
+
+          </div>
+      </div>
+  </footer>
+</section>
+
+</body>
 </html>
